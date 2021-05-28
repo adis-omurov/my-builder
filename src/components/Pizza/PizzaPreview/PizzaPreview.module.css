@@ -1,0 +1,49 @@
+.Pizza {
+  width: 300px;
+  height: 300px;
+
+  position: relative;
+
+  background-color: rgb(252, 192, 103);
+  margin: 0 auto 30px;
+  padding: 15px;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+
+.PizzaCheese {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  margin: 10px;
+}
+.PizzaIngredients {
+  position: relative;
+  width: 270px;
+  height: 270px;
+
+  border-radius: 100%;
+}
+
+.PizzaPreview {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.PizzaPrice {
+  display: inline-block;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background: #B21724;
+  color: white;
+  font-weight: bold;
+  min-width: 200px;
+}
+
+@media (min-width: 500px) {
+  .PizzaPreview {
+    margin: 0 30px;
+  }
+}

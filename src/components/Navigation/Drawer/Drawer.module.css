@@ -1,0 +1,31 @@
+.Content {
+  position: fixed;
+  width: 200px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #B21724;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .3);
+  z-index: 2;
+  transition: transform .2s ease-out;
+}
+
+.Open {
+  transform: translateX(0);
+}
+
+.Closed {
+  transform: translateX(-100%);
+}
+
+.Logo {
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 500px) {
+  .Drawer {
+    display: none;
+  }
+}

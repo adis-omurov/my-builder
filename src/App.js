@@ -1,51 +1,25 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Redirect, Route, Switch } from 'react-router-dom';
-import './App.css';
-import AntBuilder from './component/AntBuilder/AntBuilder';
+import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-import Auth from './component/Auth/Auth';
-import Checkout from './component/Checkout/Checkout';
-import Layout from './component/Layout/Layout';
-import Logout from './component/Logout/Logout';
+import Layout from './containers/Layout/Layout';
+import PizzaBuilder from './containers/PizzaBuilder/PizzaBuilder';
+import Checkout from './containers/Checkout/Checkout';
+import Orders from './containers/Orders/Orders';
 
-import Orders from './component/Orders/Orders';
-import { restore } from './store/action/auth';
-
-
-const App = () =>{
-  const dispatch = useDispatch();
-  const isAuthenticated = useSelector(state => state.auth.token !== null);
-
-  useEffect(() => restore(dispatch), [dispatch]);
-
-  let routesOutput = (
-    <Switch>
-      <Route path="/" exact component={AntBuilder} />
-      <Route path="/auth" component={Auth} />
-      <Redirect to="/" />
-    </Switch>
-  );
-
-  if (isAuthenticated) {
-    routesOutput = (
-      <Switch>
-        <Route path="/" exact component={AntBuilder} />
-        <Route path="/checkout" component={Checkout} />
-        <Route path="/orders" component={Orders} />
-        <Route path="/auth" component={Auth} />
-        <Route path="/logout" component={Logout} />
-        <Redirect to="/" />
-      </Switch>
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <BrowserRouter>
+          <Layout>
+            <Route path="/" component={PizzaBuilder} exact />
+            <Route path="/checkout" component={Checkout} />
+            <Route path="/orders" component={Orders} />
+          </Layout>
+        </BrowserRouter>
+      </div>
     );
   }
-  return (
-    <div className="App">
-     <Layout>
-     {routesOutput}
-     </Layout>
-    </div>
-  );
 }
 
 export default App;
