@@ -1,0 +1,8 @@
+.Layout{
+    background-color: rgb(106, 113, 116);
+    /* background-color: rgba(248, 209, 216, 0.603); */
+   height: 100%;
+   
+    min-height: 100%;
+    text-align: center;
+   }
