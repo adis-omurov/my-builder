@@ -1,13 +1,12 @@
-import React from 'react';
-import classes from './Logo.module.css';
-import logo from '../../../assets/images/logo.svg';
+import classes from "./Logo.module.css";
+import logo from "../../../images/candyshop.svg";
 
-function Logo(props) {
+const Logo = () => {
   return (
-    <img
-      src={logo}
-      alt="Pizza Builder"
-      className={classes.Logo} />
+    <div className={classes.Logo}>
+      <img src={logo} alt="Logo of the Candy project" />
+      <div>Candy</div>
+    </div>
   );
 }
 

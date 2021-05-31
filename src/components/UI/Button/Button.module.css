@@ -1,0 +1,30 @@
+.Button {
+  border: 0;
+  margin: 0 .5rem;
+  padding: 0 1rem;
+  border-radius: 1rem;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.Button:hover {
+  color: blue;
+}
+.Button:not(:disabled):hover {
+  background-color: yellow;
+}
+.Button:focus {
+  outline: none;
+}
+.Button:disabled {
+  opacity: .5;
+}
+
+.green {
+  background-color: blue;
+}
+.green:not(:disabled):hover {
+  background-color: yellow;
+}

@@ -1,19 +1,16 @@
-import React from 'react';
-import classes from './Modal.module.css';
+import classes from "./Modal.module.css";
+import Backdrop from "../Backdrop/Backdrop";
 
-import Backdrop from '../../../components/UI/Backdrop/Backdrop';
-
-function Modal(props) {
-  const modalClasses = [
-    classes.Modal,
-    props.open ? classes.Open : classes.Closed,
-  ].join(' ');
+const Modal = ({ show, children, cancel }) => {
+  const style = {
+    transform: show ? "translateY(0)" : "translateY(-100vh)",
+  };
 
   return (
-    <div className={classes.ModalWrapper}>
-      <Backdrop open={props.open} toggleHandler={props.toggleHandler} />
-      <div className={modalClasses}>
-        {props.children}
+    <div className={classes.Modal}>
+      <Backdrop show={show} click={cancel} />
+      <div className={classes.content} style={style}>
+        {children}
       </div>
     </div>
   );

@@ -1,20 +1,18 @@
-.Modal {
-  width: 400px;
-  height: 200px;
+.content {
   position: fixed;
-  top: calc(50vh - 150px);
-  left: calc(50vw - 200px);
-
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, .8);
-  z-index: 100;
+  top: 15%;
+  left: 30%;
+  z-index: 1;
+  width: 40%;
+  background-color: #58d1df;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  transition: transform .3s ease-out;
 }
 
-.Open {
-  transform: translateY(0);
-}
-
-.Closed {
-  transform: translateY(-100vh);
+@media (max-width: 800px) {
+  .content {
+    width: 80%;
+    left: 10%;
+  }
 }
