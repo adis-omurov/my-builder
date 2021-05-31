@@ -6,10 +6,16 @@ const Order = ({ name, phone, address, ingredients, price }) => {
 
   return (
     <div className={classes.Order}>
-      <div>{name}, {phone}, {address}</div>
-      <div>{outputIngredients}</div>
-      <strong>{price}</strong>
+    <div className={classes.test}>
+      <div className={classes.border}>
+        <h1>Name : {name}</h1>
+        <h3>Phone : {phone}</h3>
+        <h4>Addres : {address}</h4>
+      </div>
+      <li className={classes.or}>{outputIngredients}</li>
+      <strong>{price}сом</strong>
     </div>
+  </div>
   );
 }
 

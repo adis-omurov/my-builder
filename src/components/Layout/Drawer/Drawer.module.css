@@ -8,9 +8,10 @@
 
   font-size: 2rem;
   color: white;
-  background-color: tomato;
+  background-color: #58d1df;
   box-shadow: 0 0 10px rgba(0, 0, 0, .5);
   transition: transform .3s ease-out;
+  
 }
 
 .open {
