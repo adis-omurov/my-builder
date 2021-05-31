@@ -1,7 +1,6 @@
-import axios from 'axios';
+import axios from "axios";
 
-const instance = axios.create({
-  baseURL: 'https://pizza-builder-kg.firebaseio.com/'
-});
+const instance = axios.create();
+instance.defaults.baseURL = "https://my-builder-a1534-default-rtdb.firebaseio.com/";
 
 export default instance;
